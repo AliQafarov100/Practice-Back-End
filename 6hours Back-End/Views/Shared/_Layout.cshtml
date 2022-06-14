@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/assets/Bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="/assets/Scss/css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="responsive-menu d-flex justify-content-around">
+        <ul class="">
+            <li><a href="">Home</a> </li>
+            <li><a href="">About</a> </li>
+            <li><a href="">Services</a> </li>
+            <li><a href="">Portfolio</a> </li>
+            <li><a href="">Team</a> </li>
+            <li><a href="">Pricing</a> </li>
+            <li><a href="">Blog</a> </li>
+            <li>
+                <a class="dropdown" href="">
+                    DropDown
+                    <ul class="dropdown-menu">
+                        <li><a href="#">HTML</a></li>
+                        <li><a href="#">CSS</a></li>
+                        <li><a href="#">JavaScript</a></li>
+                    </ul>
+                </a>
+            </li>
+            <li><a href="">Contact</a></li>
+        </ul>
+        <i class="fa-solid fa-x"></i>
+    </div>
+    <header>
+        <nav>
+            <div class="container">
+                <div class="row ">
+                    <div class="start d-flex justify-content-between align-items-center">
+                        <div class="logo">
+                            <h3 class="text-light">
+                                START BOOTSTRAP
+                            </h3>
+                        </div>
+                        <button type="button" class="btn btn-secondary d-flex justify-content-between menu">
+                            Menu
+                            <i class="fa-solid fa-bars mt-2 ms-1"></i>
+                        </button>
+                        <div class="service">
+                            <ul class="d-flex">
+                                <li><a href="">PORTFOLIO</a></li>
+                                <li><a href="">ABOUT</a></li>
+                                @if (User.Identity.IsAuthenticated)
+                                {
+                                    <li><a href="#">@User.Identity.Name.ToUpper()</a></li>
+                                    <li><a asp-controller="Account" asp-action="Logout">Logout</a></li>
+                                }
+                                else
+                                {
+                                    <li><a asp-controller="Account" asp-action="Register">Register</a></li>
+                                    <li><a asp-controller="Account" asp-action="Login">Login</a></li>
+                                }
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    @RenderBody()
+    <footer>
+        <div class="foot row justify-content-around">
+            <div class="end col-lg-4 col-md-12 col-sm-12 col-12 mt-3">
+                <p>LOCATION</p>
+                <p>
+                    2215 John Daniel Drive
+                    Clark, MO 65243
+                </p>
+            </div>
+            <div class="end col-lg-4 col-md-12 col-sm-12 col-12 mt-3">
+                <p>AROUND THE WEB</p>
+                <div class="icons d-flex">
+                    <i class="@layoutservice.GetDatas().Result.FirstOrDefault(f => f.Key == "FacebookIcon").Value text-center"></i>
+                    <i class="@layoutservice.GetDatas().Result.FirstOrDefault(i => i.Key == "InstagramIcon").Value text-center"></i>
+                    <i class="@layoutservice.GetDatas().Result.FirstOrDefault(i => i.Key == "TwitterIcon").Value text-center"></i>
+                    <i class="@layoutservice.GetDatas().Result.FirstOrDefault(i => i.Key == "InvisionIcon").Value text-center"></i>
+                </div>
+            </div>
+            <div class="end col-lg-4 col-md-12 col-sm-12 col-12 mt-3">
+                <p>ABOUT FREELANCER</p>
+                <p>Freelance is a free to use, MIT licensed Bootstrap theme created by Start Bootstrap .</p>
+            </div>
+        </div>
+    </footer>
+    <script src="/assets/Js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,379 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.responsive-menu {
+  position: absolute;
+  top: 100px;
+  z-index: 10;
+  background-color: whitesmoke;
+  visibility: hidden;
+}
+
+.responsive-menu ul li {
+  list-style: none;
+}
+
+.responsive-menu ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+nav {
+  width: 100%;
+  height: 75px;
+  background-color: #2c3e50;
+}
+
+nav .start {
+  height: 75px;
+}
+
+nav .service ul li {
+  margin: 5px;
+  list-style: none;
+  color: white;
+}
+
+nav .service ul li a {
+  list-style: none;
+  color: white;
+  text-decoration: none;
+}
+
+#main-page {
+  width: 100%;
+  background-color: #1abc9c;
+}
+
+#main-page .frelaceer {
+  width: 50%;
+  height: 200px;
+  height: 300px;
+  margin: 0px auto;
+}
+
+#main-page .frelaceer img {
+  height: 200px;
+}
+
+#main-page .frelaceer .lineAndStar {
+  margin: 0px auto;
+}
+
+#main-page .frelaceer .lineAndStar .lines {
+  width: 40%;
+  height: 2px;
+  background-color: white;
+  margin-top: 10px;
+}
+
+#main-page .frelaceer .lineAndStar i {
+  font-size: 20px;
+  color: white;
+}
+
+#card {
+  background-color: white;
+}
+
+#card .container .potfolio {
+  width: 100%;
+  margin: 0px auto;
+}
+
+#card .container .potfolio .lineAndStars {
+  margin: 0px auto;
+}
+
+#card .container .potfolio .lineAndStars .line {
+  width: 40%;
+  height: 2px;
+  background-color: #2c3e50;
+  margin-top: 10px;
+}
+
+#card .container .potfolio .lineAndStars i {
+  font-size: 20px;
+  color: #2c3e50;
+}
+
+#card .container .potfolio p {
+  font-weight: bold;
+  font-size: 40px;
+  color: #2c3e50;
+}
+
+#card .container .cards {
+  flex-wrap: wrap;
+  margin-top: 25px;
+}
+
+#card .container .cards img {
+  width: 100%;
+  transition: 1s;
+}
+
+#card .container .cards img:hover {
+  background-color: #1abc9c;
+  opacity: 0.5;
+  transition: 1s;
+}
+
+#about {
+  padding: 50px;
+  background-color: #1abc9c;
+}
+
+#about .description {
+  width: 50%;
+  margin: 0px auto;
+}
+
+#about .description p {
+  font-weight: bold;
+  font-size: 40px;
+  color: white;
+}
+
+#about .description .lineAndStar-aboutt {
+  margin: 0px auto;
+}
+
+#about .description .lineAndStar-aboutt .about-lines {
+  width: 40%;
+  height: 5px;
+  background-color: white;
+  margin-top: 10px;
+}
+
+#about .description .lineAndStar-aboutt i {
+  font-size: 20px;
+  color: white;
+}
+
+#about .abouts {
+  margin: 0px auto;
+}
+
+#about .abouts p {
+  width: 100%;
+  font-size: 15px;
+  color: white;
+  text-align: left;
+}
+
+#about .input {
+  width: 50%;
+  margin: 0px auto;
+  text-align: center;
+}
+
+#about .input a {
+  text-decoration: none;
+  color: white;
+  border: 1px solid white;
+  padding: 20px;
+  margin: 0px auto;
+  transition: 1s;
+}
+
+#about .input a:hover {
+  background-color: white;
+  transition: 1s;
+}
+
+#about .input a:hover span {
+  color: black;
+}
+
+#contacts .aboutContact {
+  width: 50%;
+  margin: 0px auto;
+}
+
+#contacts .aboutContact p {
+  font-size: 50px;
+  color: #2c3e50;
+}
+
+#contacts .stars {
+  margin: 0px auto;
+}
+
+#contacts .stars .line {
+  width: 40%;
+  height: 3px;
+  background-color: #2c3e50;
+  margin-top: 10px;
+}
+
+#contacts .stars i {
+  font-size: 20px;
+  color: #2c3e50;
+}
+
+#contacts .contactMe {
+  margin: 0px auto;
+}
+
+#contacts .contactMe input {
+  height: 75px;
+  border: none;
+  border-bottom: 1px solid gray;
+}
+
+footer .foot * {
+  color: white;
+}
+
+footer .foot {
+  width: 100%;
+  background-color: #2c3e50;
+  padding-top: 50px;
+}
+
+footer .foot .end i {
+  width: 30px;
+  height: 30px;
+  border: 1px solid white;
+  border-radius: 50%;
+  padding: 25px;
+  display: flex;
+  justify-content: center;
+}
+
+footer .foot .end p {
+  font-size: 25px;
+}
+
+@media screen and (min-width: 1240px) {
+  .menu {
+    visibility: hidden;
+  }
+  .lineAndStar {
+    width: 25%;
+  }
+  .lineAndStars {
+    width: 25%;
+  }
+  input {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1240px) {
+  .service {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .lineAndStars {
+    width: 25%;
+  }
+  .lineAndStar {
+    width: 25%;
+  }
+  .stars {
+    width: 25%;
+  }
+  input {
+    width: 100%;
+  }
+  .abouts {
+    width: 50%;
+  }
+  .end {
+    width: 20%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .frelaceer {
+    width: 100%;
+  }
+  .frelaceer img {
+    width: 100%;
+  }
+  .frelaceer .lineAndStar {
+    width: 90%;
+  }
+  .frelaceer p {
+    width: 90%;
+    margin: 0px auto;
+  }
+  .lineAndStars {
+    width: 50%;
+  }
+  .contactMe {
+    width: 100%;
+  }
+  .contactMe textarea {
+    width: 100%;
+  }
+  .contactMe form {
+    width: 100%;
+  }
+  input {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .lineAndStars {
+    width: 40%;
+  }
+  .lineAndStar {
+    width: 40%;
+  }
+  .abouts {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .abouts .texts {
+    width: 100%;
+  }
+  .contactMe {
+    width: 100%;
+  }
+  .contactMe textarea {
+    width: 100%;
+  }
+  .contactMe form {
+    width: 100%;
+  }
+  .contactMe form input {
+    width: 100%;
+  }
+  .menu {
+    width: 25%;
+  }
+  .frelaceer p {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .lineAndStars {
+    width: 40%;
+  }
+  .lineAndStar {
+    width: 40%;
+  }
+  .abouts {
+    width: 100%;
+  }
+  .abouts .texts {
+    width: 100%;
+  }
+  .stars {
+    width: 100%;
+  }
+  .stars .line {
+    width: 45%;
+  }
+}
+/*# sourceMappingURL=style.css.map */

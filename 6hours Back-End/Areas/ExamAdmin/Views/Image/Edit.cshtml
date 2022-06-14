@@ -1,0 +1,15 @@
+﻿@model Image
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+<form method="post" enctype="multipart/form-data">
+    <label>Photo</label>
+    <input asp-for="Img" accept="image/*" class="form-control"/>
+    <span asp-validation-for="Img" class="text-danger"></span>
+
+    <div class="mt-3">
+        <button type="submit" class="btn btn-danger">Edit Image</button>
+    </div>
+</form>

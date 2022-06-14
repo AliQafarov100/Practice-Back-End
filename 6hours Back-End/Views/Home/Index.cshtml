@@ -1,0 +1,89 @@
+﻿@model List<Image>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<main>
+    <section id="main-page" class="py-5">
+        <div class="frelaceer text-center">
+            <img src="/assets/Image/avataaars.svg">
+            <h1 class="text-light">@layoutservice.GetDatas().Result.FirstOrDefault(m => m.Key == "MainTitle").Value</h1>
+            <div class="lineAndStar d-flex justify-content-between">
+
+                <div class="lines"></div>
+                <i class="fa-solid fa-star"></i>
+                <div class="lines"></div>
+            </div>
+            <p class="text-light">@layoutservice.GetDatas().Result.FirstOrDefault(ms => ms.Key == "MainSubTitle").Value</p>
+        </div>
+    </section>
+    <section id="card" class="mb-5">
+        <div class="container">
+            <div class="row">
+                <div class="potfolio text-center col-lg-12 mt-5">
+                    <p>@layoutservice.GetDatas().Result.FirstOrDefault(cd => cd.Key == "CardTitle").Value</p>
+                    <div class="lineAndStars d-flex justify-content-between">
+                        <div class="line porfolio-lines"></div>
+                        <i class="fa-solid fa-star"></i>
+                        <div class="line porfolio-lines"></div>
+                    </div>
+                </div>
+                @foreach (Image image in Model)
+                {
+                    <div class="cards col-lg-4">
+                        <img src="/assets/Image/Cards/@image.Photo" alt="">
+                    </div>
+                }
+            </div>  
+        </div>
+    </section>
+    <section id="about">
+        <div class="description text-light text-center">
+            <p>@layoutservice.GetDatas().Result.FirstOrDefault(at => at.Key == "AboutTitle").Value</p>
+            <div class="lineAndStar-about d-flex justify-content-between">
+                <div class="about-lines"></div>
+                <i class="fa-solid fa-star"></i>
+                <div class="about-lines"></div>
+            </div>
+        </div>
+        <div class="abouts justify-content-between mt-3 d-flex">
+            <div class="texts text-center">
+                <p>
+                    @layoutservice.GetDatas().Result.FirstOrDefault(t => t.Key == "AboutFirstText").Value
+                </p>
+            </div>
+            <div class=" texts text-center">
+                <p>@layoutservice.GetDatas().Result.FirstOrDefault(t => t.Key == "AboutSecondText").Value</p>
+            </div>
+        </div>
+        <div class="input row mt-5">
+            <a href="" class="col-lg-4 col-md-12 col-sm-12 col-12">
+                <span><i class="fa-solid fa-download"></i></span><span class="ms-2">Free Download</span>
+            </a>
+        </div>
+    </section>
+    <section id="contacts" class="py-5">
+        <div class="aboutContact text-center">
+            <p>
+                @layoutservice.GetDatas().Result.FirstOrDefault(c => c.Key == "ContactTitle").Value
+            </p>
+            <div class="stars d-flex justify-content-between">
+                <div class="line"></div>
+                <i class="fa-solid fa-star mt-1"></i>
+                <div class="line"></div>
+            </div>
+        </div>
+        <div class="contactMe w-50 mt-4">
+     
+            <form action="/" method="post">
+                <input type="text" placeholder="Full name" class=" "> <br>
+                <input type="text" placeholder="Email address" class=""> <br>
+                <input type="text" placeholder="Phone number" class=""> <br>
+                <textarea name="" id="" cols="100" rows="5" placeholder="Message" style="border: none; border-bottom: 1px solid gray;"></textarea>
+            </form>
+               
+            
+            <button type="button" class="btn btn-secondary mt-3">Send</button>
+        </div>
+    </section>
+</main>

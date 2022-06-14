@@ -1,0 +1,417 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.responsive-menu{
+    position: absolute;
+    top: 100px;
+    z-index: 10;
+    background-color: whitesmoke;
+    visibility: hidden;
+
+    ul{
+        li{
+            list-style: none;
+            a{
+                text-decoration: none;
+                color: black;
+            }
+        }
+    }
+}
+nav{
+    width: 100%;
+    height: 75px;
+    background-color: #2c3e50;
+
+    .start{
+        height: 75px;
+    }
+
+    .service{
+       
+        ul{
+            
+            li{
+                margin: 5px;
+                list-style: none;
+                color: white;
+
+                a{
+                    list-style: none;
+                    color: white;
+                    text-decoration: none;
+                   
+                }
+            }
+            
+        }
+    }
+}
+
+#main-page{
+ width: 100%;
+ background-color: #1abc9c;
+
+    .frelaceer{ 
+        width: 50%;
+        height: 200px;
+        height: 300px;
+        margin: 0px auto;
+
+        
+        img{
+           
+            height: 200px;
+        }
+
+        .lineAndStar{
+            
+            margin: 0px auto;
+
+            .lines{
+                width: 40%;
+                height: 2px;
+                background-color: white;
+                margin-top: 10px;
+            }
+            i{
+                font-size: 20px;
+                color: white;
+            }
+        }
+       
+    }
+}
+
+#card{
+background-color: white;
+    .container{
+
+       .potfolio{
+        width: 100%;
+        margin: 0px auto;
+
+          .lineAndStars{
+           
+            margin: 0px auto;
+
+            .line{
+                width: 40%;
+                height: 2px;
+                background-color: #2c3e50;
+                margin-top: 10px;
+            }
+            i{
+                font-size: 20px;
+                color:#2c3e50;
+            }
+
+
+          }
+
+          p{
+            font-weight: bold;
+            font-size: 40px;
+            color: #2c3e50;
+          }
+       }
+
+       .cards{
+         flex-wrap: wrap;
+         margin-top: 25px;
+        img{
+            width: 100%;
+            transition: 1s;
+
+            &:hover{
+                background-color: #1abc9c;
+                opacity: 0.5;
+                transition: 1s;
+            }
+        } 
+      }
+    }
+}
+
+#about{
+    padding: 50px;
+    background-color: #1abc9c;
+
+    .description{
+       width: 50%;
+       margin: 0px auto;
+
+       p{
+        font-weight: bold;
+        font-size: 40px;
+        color: white;
+       }
+
+       .lineAndStar-aboutt{
+           
+        margin: 0px auto;
+
+        .about-lines{
+            width: 40%;
+            height: 5px;
+            background-color: white;
+            margin-top: 10px;
+            
+        }
+        i{
+            font-size: 20px;
+            color:white;
+        }
+
+
+      }
+    }
+
+    .abouts{
+        margin: 0px auto;
+       
+
+        
+        p{
+            width: 100%;
+            font-size: 15px;
+            color: white;
+            text-align: left;
+        }
+    }
+
+    .input{
+        width: 50%;
+        margin: 0px auto;
+        text-align: center;
+        a{
+       
+            text-decoration: none;
+            color: white;
+            border: 1px solid white;
+            padding: 20px;
+            margin: 0px auto;
+            transition: 1s;
+    
+            &:hover{
+                background-color: white;
+                transition: 1s;
+    
+                span{
+                    color: black;
+                }
+            }
+        }
+    }
+}
+
+#contacts{
+    .aboutContact{
+      width: 50%;
+      margin: 0px auto;
+
+        p{
+            font-size: 50px;
+            color: #2c3e50;
+        }
+    }
+    .stars{
+        
+        margin: 0px auto;
+
+       .line{
+          width: 40%;
+          height:3px;
+          background-color:#2c3e50;
+          margin-top: 10px;
+       }
+
+       i{
+           font-size: 20px;
+           color:#2c3e50;
+       }
+    }
+
+    .contactMe{
+        margin: 0px auto;
+
+        input{
+            
+            height: 75px;
+            border: none;
+            border-bottom: 1px solid gray;
+        }
+    }
+}
+footer{
+    .foot *{
+        color: white;
+    }
+    .foot{
+        width: 100%;
+        background-color: #2c3e50;
+        padding-top: 50px;
+
+        .end{
+           
+
+            i{
+                width: 30px;
+                height: 30px;
+                border: 1px solid white;
+                border-radius: 50%;
+                padding: 25px;
+                display: flex;
+                justify-content: center;
+            }
+            p{
+                font-size: 25px;
+            }
+        }
+    }
+}
+
+@media screen and(min-width: 1240px) {
+
+    .menu{
+        visibility: hidden;
+    }
+    .lineAndStar{
+        width: 25%;
+    }
+    .lineAndStars{
+         width: 25%;
+    }
+    input{
+        width: 100%;
+    }
+}
+
+@media screen and(max-width: 1240px) {
+    .service{
+        display: none;
+    }
+}
+@media screen and(min-width: 992px){
+    .lineAndStars{
+        width: 25%;
+    }
+    .lineAndStar{
+        width: 25%;
+   }
+   .stars{
+      width: 25%;
+   }
+   input{
+    width: 100%;
+}
+.abouts{
+    width: 50%;
+}
+
+.end{
+    width: 20%;
+}
+}
+
+@media screen and(max-width: 992px){
+
+    .frelaceer{
+        width: 100%;
+
+        img{
+            width: 100%;
+        }
+
+        .lineAndStar{
+            width: 90%;
+        }
+        p{
+            width: 90%;
+            margin: 0px auto;
+        }
+    }
+    .lineAndStars{
+        width: 50%;
+    }
+    .contactMe{
+        width: 100%;
+
+        textarea{
+            width: 100%;
+        }
+        form{
+            width: 100%;
+        }
+    }
+    input{
+        width: 100%;
+    }
+}
+@media screen and(max-width: 768px){
+    .lineAndStars{
+        width: 40%;
+    }
+    .lineAndStar{
+        width: 40%;
+   }
+  
+
+   .abouts{
+      width: 100%;
+      flex-wrap: wrap;
+
+      .texts{
+        width: 100%;
+      }
+   }
+   .contactMe{
+    width: 100%;
+
+    textarea{
+        width: 100%;
+    }
+    form{
+        width: 100%;
+
+        input{
+            width: 100%;
+        }
+    }
+}
+
+  .menu{
+    width: 25%;
+  }
+  .frelaceer{
+    p{
+        font-size: 15px;  
+    }
+  }
+}
+
+@media screen and(max-width: 350px){
+    .lineAndStars{
+        width: 40%;
+    }
+    .lineAndStar{
+        width: 40%;
+   }
+   .abouts{
+      width: 100%;
+
+      .texts{
+        width: 100%;
+      }
+   }
+ .stars{
+    width: 100%;
+
+    .line{
+        width: 45%;
+    }
+ }
+}
